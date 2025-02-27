@@ -72,27 +72,45 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    title: "Web Desa Sakerta Barat",
+    des: "Developed a full-stack digital administrative system for Sakerta Barat Village featuring secure authentication, real-time notifications, digital signatures with QR verification, and automated document generation.",
+    img: "/village.jpg",
+    iconLists: [
+      "/next.svg",
+      "/tail.svg",
+      "/ts.svg",
+      "/nestjs.svg",
+      "/mysql.svg",
+    ],
     link: "https://desa.hapidzfadli.com/",
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "/ui.yoom.com",
+    title: "Arjuna21 - Cinema Ticket Booking Platform",
+    des: "Developed a comprehensive web-based cinema ticketing system that enables users to browse movies, select theaters, book seats, and process payments securely. Features include user authentication, real-time seat selection, payment integration with Midtrans, e-ticket generation with QR code verification, and separate dashboards for users and administrators.",
+    img: "/cinema-ticket.svg", // You'll need to create or find an appropriate image
+    iconLists: [
+      "/laravel-icon.svg",
+      "/getbootstrap-icon.svg",
+      "/jquery-icon.svg",
+      "/mysql.svg",
+      "/docker-icon.svg", // You might need to create this icon
+    ],
+    link: "http://arjuna-mc.site/",
   },
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "/ui.aiimg.com",
+    title: "Bulletin Platform",
+    des: "Built a containerized bulletin/news platform using Spring Boot and PostgreSQL, featuring Docker integration for seamless deployment, database persistence, and scalable architecture for reliable news delivery.",
+    img: "/bulletin-new.png", // You'll need to create or find an appropriate image
+    iconLists: [
+      "/springio-icon.svg",
+      "/java-icon.svg",
+      "/postgresql-icon.svg",
+      "/getbootstrap-icon.svg",
+      "/jquery-icon.svg",
+    ],
+    link: "https://bulletin.hapidzfadli.com/", // Replace with actual link if available
   },
   {
     id: 4,
@@ -100,7 +118,7 @@ export const projects = [
     des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
     img: "/p4.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/ui.apple.com",
+    link: "/",
   },
 ];
 
@@ -173,31 +191,39 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    title: "Java Technical Consultant",
+    desc: "Develop and maintain ERP software solutions using Java programming language and Spring framework.",
     className: "md:col-span-2",
-    thumbnail: "/exp1.svg",
+    thumbnail: "/exp1.svg", // You may need to adjust the image to match the role
+    period: "November 2024 - Present",
+    location: "Jakarta, Indonesia",
   },
   {
     id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-    className: "md:col-span-2", // change to md:col-span-2
+    title: "Full Stack Developer",
+    desc: "Developed modular features and reusable components with REST APIs for multiple web applications.",
+    className: "md:col-span-2",
     thumbnail: "/exp2.svg",
+    period: "August 2023 - January 2024",
+    location: "Yogyakarta, Indonesia",
   },
   {
     id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2", // change to md:col-span-2
+    title: "WordPress Developer",
+    desc: "Created and customized themes and plugins while implementing SEO strategies to improve website visibility.",
+    className: "md:col-span-2",
     thumbnail: "/exp3.svg",
+    period: "January 2020 - March 2024",
+    location: "Remote / Online",
   },
   {
     id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
+    title: "Computer Science Student",
+    desc: "Bachelor's degree program with a focus on programming, algorithms, and software development.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
+    period: "August 2020 - January 2025",
+    location: "Bandung, Indonesia",
   },
 ];
 
