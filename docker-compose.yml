@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: portfolio
+    restart: always
+    # Using port 4000 on the host machine
+    ports:
+      - "4000:3000"
+    networks:
+      - portfolio_network
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - portfolio_data:/app/.next/cache
+
+volumes:
+  portfolio_data:
+
+networks:
+  portfolio_network:
+    driver: bridge

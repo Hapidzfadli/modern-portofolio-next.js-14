@@ -1,4 +1,6 @@
-import { useState } from "react";
+"use client";
+
+import { useState, useEffect } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 
 // Also install this npm i --save-dev @types/react-lottie
@@ -55,6 +57,12 @@ export const BentoGridItem = ({
   const rightLists = ["NextJS", "Mysql", "PostgreSQL", "Golang"];
 
   const [copied, setCopied] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    // Set isClient to true when the component is mounted on the client
+    setIsClient(true);
+  }, []);
 
   const defaultOptions = {
     loop: copied,
@@ -66,9 +74,11 @@ export const BentoGridItem = ({
   };
 
   const handleCopy = () => {
-    const text = "hapidzfadli@gmail.com";
-    navigator.clipboard.writeText(text);
-    setCopied(true);
+    if (typeof navigator !== "undefined") {
+      const text = "hapidzfadli@gmail.com";
+      navigator.clipboard.writeText(text);
+      setCopied(true);
+    }
   };
 
   return (
@@ -180,8 +190,10 @@ export const BentoGridItem = ({
                   copied ? "block" : "block"
                 }`}
               >
-                {/* <img src="/confetti.gif" alt="confetti" /> */}
-                <Lottie options={defaultOptions} height={200} width={400} />
+                {/* Only render Lottie on the client side */}
+                {isClient && copied && (
+                  <Lottie options={defaultOptions} height={200} width={400} />
+                )}
               </div>
 
               <MagicButton
